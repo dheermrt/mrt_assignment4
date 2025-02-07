@@ -1,0 +1,1554 @@
+<sdf version='1.9'>
+  <world name='car_world'>
+    <physics name='1ms' type='ignored'>
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>1000</real_time_update_rate>
+    </physics>
+    <plugin name='ignition::gazebo::systems::Physics' filename='libignition-gazebo-physics-system.so'/>
+    <plugin name='ignition::gazebo::systems::UserCommands' filename='libignition-gazebo-user-commands-system.so'/>
+    <plugin name='ignition::gazebo::systems::SceneBroadcaster' filename='libignition-gazebo-scene-broadcaster-system.so'/>
+    <gravity>0 0 -9.8</gravity>
+    <magnetic_field>6e-06 2.3e-05 -4.2e-05</magnetic_field>
+    <atmosphere type='adiabatic'/>
+    <scene>
+      <ambient>0.4 0.4 0.4 1</ambient>
+      <background>0.7 0.7 0.7 1</background>
+      <shadows>true</shadows>
+    </scene>
+    <model name='ground_plane'>
+      <static>true</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>1 1</size>
+            </plane>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <material>
+            <ambient>0.8 0.8 0.8 1</ambient>
+            <diffuse>0.8 0.8 0.8 1</diffuse>
+            <specular>0.8 0.8 0.8 1</specular>
+          </material>
+        </visual>
+        <pose>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>0 0 0 0 -0 0</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='rover'>
+      <link name='root_link'>
+        <inertial>
+          <pose>-0.093783 -0.006689 0.067287 0 -0 0</pose>
+          <mass>4.9862299999999999</mass>
+          <inertia>
+            <ixx>0.28456399999999998</ixx>
+            <ixy>0.0128471</ixy>
+            <ixz>-0.031806099999999997</ixz>
+            <iyy>0.19602600000000001</iyy>
+            <iyz>-0.016932099999999999</iyz>
+            <izz>0.33812799999999998</izz>
+          </inertia>
+        </inertial>
+        <collision name='root_link_fixed_joint_lump__base_link_collision'>
+          <pose>0.276421885520658 -0.526119109974194 -0.213679693338444 0 0 3.1415926</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>file:///home/dhher/ros2_ws/install/rover_gazebosim/share/rover_gazebosim/meshes/base_link.STL</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <collision name='root_link_fixed_joint_lump__camera_link_collision_1'>
+          <pose>0.3406407689218521 -3.44147610409351e-09 0.49 0 0 7.292820413539611e-06</pose>
+          <geometry>
+            <cylinder>
+              <length>0.0050000000000000001</length>
+              <radius>0.0050000000000000001</radius>
+            </cylinder>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+          </surface>
+        </collision>
+        <collision name='root_link_fixed_joint_lump__connector-link-1_collision_2'>
+          <pose>-0.2943280836051894 0.05000092061217953 0.170410306661556 1.5708 3.308722450212111e-24 3.1415926</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>file:///home/dhher/ros2_ws/install/rover_gazebosim/share/rover_gazebosim/meshes/connector-link-1.STL</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <collision name='root_link_fixed_joint_lump__triangle-left_collision_3'>
+          <pose>-0.3323280836051895 0.05000092264859168 0.170410306661556 1.570796326096418 0.01949999999986841 1.570796201582016</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>file:///home/dhher/ros2_ws/install/rover_gazebosim/share/rover_gazebosim/meshes/triangle-left.STL</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <collision name='root_link_fixed_joint_lump__triangle-ball-left_collision_4'>
+          <pose>-0.3579280573154835 0.259961000868839 0.1663155661593967 -3.673910225802517e-06 0.1387499999998688 1.570796201498113</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>file:///home/dhher/ros2_ws/install/rover_gazebosim/share/rover_gazebosim/meshes/triangle-ball-left.STL</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <collision name='root_link_fixed_joint_lump__socket-left_collision_5'>
+          <pose>-0.3579280573154835 0.259961000868839 0.1663155661593967 2.865087210628056 1.528037792266843 -1.134868638612646</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>file:///home/dhher/ros2_ws/install/rover_gazebosim/share/rover_gazebosim/meshes/socket-left.STL</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <collision name='root_link_fixed_joint_lump__left-rod_collision_6'>
+          <pose>-0.3579280573154835 0.259961000868839 0.1663155661593967 1.561001172513787 -0.04162317154605432 -0.9037557142457474</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>file:///home/dhher/ros2_ws/install/rover_gazebosim/share/rover_gazebosim/meshes/left-rod.STL</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <collision name='root_link_fixed_joint_lump__socket-left-down_collision_7'>
+          <pose>-0.3499595345915757 0.2401341959955069 -0.09999575661596605 1.455875726301699 -1.528033213700031 2.006661020470555</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>file:///home/dhher/ros2_ws/install/rover_gazebosim/share/rover_gazebosim/meshes/socket-left-down.STL</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <collision name='root_link_fixed_joint_lump__triangle-connector_collision_8'>
+          <pose>-0.3423280900596734 -0.002175138183998726 0.05883189125274074 1.570803673903449 -7.346410075447807e-06 -1.570796451994163</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>file:///home/dhher/ros2_ws/install/rover_gazebosim/share/rover_gazebosim/meshes/triangle-connector-l.STL</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <collision name='root_link_fixed_joint_lump__connector-link-2_collision_9'>
+          <pose>-0.2943280889641688 -0.04999907938782022 0.170410306661556 1.5708 3.308722450212111e-24 3.1415926</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>file:///home/dhher/ros2_ws/install/rover_gazebosim/share/rover_gazebosim/meshes/connector-link-2.STL</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <collision name='root_link_fixed_joint_lump__triangle-right_collision_10'>
+          <pose>0.00447487357973847 -0.3967025500060352 -0.1699991544888846 1.570796326096418 -0.01949999999986846 -1.570796308761603</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>file:///home/dhher/ros2_ws/install/rover_gazebosim/share/rover_gazebosim/meshes/triangle-right.STL</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <collision name='root_link_fixed_joint_lump__triangle-ball-right_collision_11'>
+          <pose>-0.357928085177897 -0.2599591528278593 0.1745050471637152 -3.141588981083521 0.03726100000013136 -1.570796308801255</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>file:///home/dhher/ros2_ws/install/rover_gazebosim/share/rover_gazebosim/meshes/triangle-ball-right.STL</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <collision name='root_link_fixed_joint_lump__socket-right_collision_12'>
+          <pose>-0.357928085177897 -0.2599591528278593 0.1745050471637152 0.1065852622205499 1.531899579196736 1.627022328599884</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>file:///home/dhher/ros2_ws/install/rover_gazebosim/share/rover_gazebosim/meshes/socket-right.STL</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <collision name='root_link_fixed_joint_lump__right-rod_collision_13'>
+          <pose>-0.3579377606171951 -0.2597872529776347 0.1700808960499571 1.53432870483634 0.01353444297993293 -2.730048658558628</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>file:///home/dhher/ros2_ws/install/rover_gazebosim/share/rover_gazebosim/meshes/right-rod.STL</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <collision name='root_link_fixed_joint_lump__socket-right-down_collision_14'>
+          <pose>-0.3580732686273307 -0.239568850674479 -0.09296278004254466 1.470282398899383 -1.531900466496705 -1.514387848087537</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>file:///home/dhher/ros2_ws/install/rover_gazebosim/share/rover_gazebosim/meshes/socket-right-down.STL</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <collision name='root_link_fixed_joint_lump__imu_link_collision_15'>
+          <pose>2.819461475400686e-08 1.481339073627908e-08 0.09999999999999998 0 0 3.1415926</pose>
+          <geometry>
+            <cylinder>
+              <length>0.050000000000000003</length>
+              <radius>0.050000000000000003</radius>
+            </cylinder>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+          </surface>
+        </collision>
+        <collision name='root_link_fixed_joint_lump__Left_rocker_collision_16'>
+          <pose>-0.02032807219056398 0.2630009059285763 0.120410306661556 1.5708 -0.06648000000000001 3.1415926</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>file:///home/dhher/ros2_ws/install/rover_gazebosim/share/rover_gazebosim/meshes/Left_rocker.STL</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <collision name='root_link_fixed_joint_lump__ball-left-down_collision_17'>
+          <pose>-0.3525510313620394 0.2483999196985515 -0.1314160021317445 3.141585169205781 0.2777726535883254 -8.546549424026115e-07</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>file:///home/dhher/ros2_ws/install/rover_gazebosim/share/rover_gazebosim/meshes/ball-left-down.STL</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <collision name='root_link_fixed_joint_lump__Right_rocker_collision_18'>
+          <pose>-0.02032811023937076 -0.4470000940714229 0.120410306661556 1.5708 3.308722450212111e-24 3.1415926</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>file:///home/dhher/ros2_ws/install/rover_gazebosim/share/rover_gazebosim/meshes/Right_rocker.STL</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <collision name='root_link_fixed_joint_lump__ball-right-down_collision_19'>
+          <pose>-0.3585780995964853 -0.2484009710326352 -0.1232704228353337 -2.849976781616171e-07 0.381792653587085 -1.528355377349383e-06</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>file:///home/dhher/ros2_ws/install/rover_gazebosim/share/rover_gazebosim/meshes/ball-right-down.STL</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <collision name='root_link_fixed_joint_lump__sensor_laser_collision_20'>
+          <pose>2.819461475400686e-08 1.481339073627908e-08 0.2 0 0 -1.071795863401145e-07</pose>
+          <geometry>
+            <cylinder>
+              <length>0.050000000000000003</length>
+              <radius>0.050000000000000003</radius>
+            </cylinder>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+          </surface>
+        </collision>
+        <visual name='root_link_fixed_joint_lump__base_link_visual'>
+          <pose>0.276421885520658 -0.526119109974194 -0.213679693338444 0 0 3.1415926</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>file:///home/dhher/ros2_ws/install/rover_gazebosim/share/rover_gazebosim/meshes/base_link.STL</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Trunk</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+            <diffuse>0.9902 1 1 1</diffuse>
+            <ambient>0.9902 1 1 1</ambient>
+          </material>
+        </visual>
+        <visual name='root_link_fixed_joint_lump__camera_link_visual_1'>
+          <pose>0.3406407689218521 -3.44147610409351e-09 0.49 0 0 7.292820413539611e-06</pose>
+          <geometry>
+            <cylinder>
+              <length>0.0050000000000000001</length>
+              <radius>0.0050000000000000001</radius>
+            </cylinder>
+          </geometry>
+          <material>
+            <diffuse>0 1 0 1</diffuse>
+            <ambient>0 1 0 1</ambient>
+          </material>
+        </visual>
+        <visual name='root_link_fixed_joint_lump__connector-link-1_visual_2'>
+          <pose>-0.2943280836051894 0.05000092061217953 0.170410306661556 1.5708 3.308722450212111e-24 3.1415926</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>file:///home/dhher/ros2_ws/install/rover_gazebosim/share/rover_gazebosim/meshes/connector-link-1.STL</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <diffuse>0.990196 1 1 1</diffuse>
+            <ambient>0.990196 1 1 1</ambient>
+          </material>
+        </visual>
+        <visual name='root_link_fixed_joint_lump__triangle-left_visual_3'>
+          <pose>-0.3323280836051895 0.05000092264859168 0.170410306661556 1.570796326096418 0.01949999999986841 1.570796201582016</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>file:///home/dhher/ros2_ws/install/rover_gazebosim/share/rover_gazebosim/meshes/triangle-left.STL</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <diffuse>0.990196 1 1 1</diffuse>
+            <ambient>0.990196 1 1 1</ambient>
+          </material>
+        </visual>
+        <visual name='root_link_fixed_joint_lump__triangle-ball-left_visual_4'>
+          <pose>-0.3579280573154835 0.259961000868839 0.1663155661593967 -3.673910225802517e-06 0.1387499999998688 1.570796201498113</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>file:///home/dhher/ros2_ws/install/rover_gazebosim/share/rover_gazebosim/meshes/triangle-ball-left.STL</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <diffuse>0.813726 0.77451 0.735294 1</diffuse>
+            <ambient>0.813726 0.77451 0.735294 1</ambient>
+          </material>
+        </visual>
+        <visual name='root_link_fixed_joint_lump__socket-left_visual_5'>
+          <pose>-0.3579280573154835 0.259961000868839 0.1663155661593967 2.865087210628056 1.528037792266843 -1.134868638612646</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>file:///home/dhher/ros2_ws/install/rover_gazebosim/share/rover_gazebosim/meshes/socket-left.STL</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <diffuse>0.813726 0.77451 0.735294 1</diffuse>
+            <ambient>0.813726 0.77451 0.735294 1</ambient>
+          </material>
+        </visual>
+        <visual name='root_link_fixed_joint_lump__left-rod_visual_6'>
+          <pose>-0.3579280573154835 0.259961000868839 0.1663155661593967 1.561001172513787 -0.04162317154605432 -0.9037557142457474</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>file:///home/dhher/ros2_ws/install/rover_gazebosim/share/rover_gazebosim/meshes/left-rod.STL</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <diffuse>1 0.627451 0.627451 1</diffuse>
+            <ambient>1 0.627451 0.627451 1</ambient>
+          </material>
+        </visual>
+        <visual name='root_link_fixed_joint_lump__socket-left-down_visual_7'>
+          <pose>-0.3499595345915757 0.2401341959955069 -0.09999575661596605 1.455875726301699 -1.528033213700031 2.006661020470555</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>file:///home/dhher/ros2_ws/install/rover_gazebosim/share/rover_gazebosim/meshes/socket-left-down.STL</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <diffuse>0.813726 0.77451 0.735294 1</diffuse>
+            <ambient>0.813726 0.77451 0.735294 1</ambient>
+          </material>
+        </visual>
+        <visual name='root_link_fixed_joint_lump__triangle-connector_visual_8'>
+          <pose>-0.3423280900596734 -0.002175138183998726 0.05883189125274074 1.570803673903449 -7.346410075447807e-06 -1.570796451994163</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>file:///home/dhher/ros2_ws/install/rover_gazebosim/share/rover_gazebosim/meshes/triangle-connector-l.STL</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <ambient>1 1 1 1</ambient>
+          </material>
+        </visual>
+        <visual name='root_link_fixed_joint_lump__connector-link-2_visual_9'>
+          <pose>-0.2943280889641688 -0.04999907938782022 0.170410306661556 1.5708 3.308722450212111e-24 3.1415926</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>file:///home/dhher/ros2_ws/install/rover_gazebosim/share/rover_gazebosim/meshes/connector-link-2.STL</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <diffuse>0.990196 1 1 1</diffuse>
+            <ambient>0.990196 1 1 1</ambient>
+          </material>
+        </visual>
+        <visual name='root_link_fixed_joint_lump__triangle-right_visual_10'>
+          <pose>0.00447487357973847 -0.3967025500060352 -0.1699991544888846 1.570796326096418 -0.01949999999986846 -1.570796308761603</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>file:///home/dhher/ros2_ws/install/rover_gazebosim/share/rover_gazebosim/meshes/triangle-right.STL</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <ambient>1 1 1 1</ambient>
+          </material>
+        </visual>
+        <visual name='root_link_fixed_joint_lump__triangle-ball-right_visual_11'>
+          <pose>-0.357928085177897 -0.2599591528278593 0.1745050471637152 -3.141588981083521 0.03726100000013136 -1.570796308801255</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>file:///home/dhher/ros2_ws/install/rover_gazebosim/share/rover_gazebosim/meshes/triangle-ball-right.STL</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <diffuse>0.813726 0.77451 0.735294 1</diffuse>
+            <ambient>0.813726 0.77451 0.735294 1</ambient>
+          </material>
+        </visual>
+        <visual name='root_link_fixed_joint_lump__socket-right_visual_12'>
+          <pose>-0.357928085177897 -0.2599591528278593 0.1745050471637152 0.1065852622205499 1.531899579196736 1.627022328599884</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>file:///home/dhher/ros2_ws/install/rover_gazebosim/share/rover_gazebosim/meshes/socket-right.STL</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <diffuse>0.813726 0.77451 0.735294 1</diffuse>
+            <ambient>0.813726 0.77451 0.735294 1</ambient>
+          </material>
+        </visual>
+        <visual name='root_link_fixed_joint_lump__right-rod_visual_13'>
+          <pose>-0.3579377606171951 -0.2597872529776347 0.1700808960499571 1.53432870483634 0.01353444297993293 -2.730048658558628</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>file:///home/dhher/ros2_ws/install/rover_gazebosim/share/rover_gazebosim/meshes/right-rod.STL</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <diffuse>1 0.627451 0.627451 1</diffuse>
+            <ambient>1 0.627451 0.627451 1</ambient>
+          </material>
+        </visual>
+        <visual name='root_link_fixed_joint_lump__socket-right-down_visual_14'>
+          <pose>-0.3580732686273307 -0.239568850674479 -0.09296278004254466 1.470282398899383 -1.531900466496705 -1.514387848087537</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>file:///home/dhher/ros2_ws/install/rover_gazebosim/share/rover_gazebosim/meshes/socket-right-down.STL</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <diffuse>0.813726 0.77451 0.735294 1</diffuse>
+            <ambient>0.813726 0.77451 0.735294 1</ambient>
+          </material>
+        </visual>
+        <visual name='root_link_fixed_joint_lump__imu_link_visual_15'>
+          <pose>2.819461475400686e-08 1.481339073627908e-08 0.09999999999999998 0 0 3.1415926</pose>
+          <geometry>
+            <cylinder>
+              <length>0.0050000000000000001</length>
+              <radius>0.0050000000000000001</radius>
+            </cylinder>
+          </geometry>
+          <material>
+            <diffuse>0 0 0 1</diffuse>
+            <ambient>0 0 0 1</ambient>
+          </material>
+        </visual>
+        <visual name='root_link_fixed_joint_lump__Left_rocker_visual_16'>
+          <pose>-0.02032807219056398 0.2630009059285763 0.120410306661556 1.5708 -0.06648000000000001 3.1415926</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>file:///home/dhher/ros2_ws/install/rover_gazebosim/share/rover_gazebosim/meshes/Left_rocker.STL</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Grey</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+            <diffuse>0.990196 1 1 1</diffuse>
+            <ambient>0.990196 1 1 1</ambient>
+          </material>
+        </visual>
+        <visual name='root_link_fixed_joint_lump__ball-left-down_visual_17'>
+          <pose>-0.3525510313620394 0.2483999196985515 -0.1314160021317445 3.141585169205781 0.2777726535883254 -8.546549424026115e-07</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>file:///home/dhher/ros2_ws/install/rover_gazebosim/share/rover_gazebosim/meshes/ball-left-down.STL</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <diffuse>0.813726 0.77451 0.735294 1</diffuse>
+            <ambient>0.813726 0.77451 0.735294 1</ambient>
+          </material>
+        </visual>
+        <visual name='root_link_fixed_joint_lump__Right_rocker_visual_18'>
+          <pose>-0.02032811023937076 -0.4470000940714229 0.120410306661556 1.5708 3.308722450212111e-24 3.1415926</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>file:///home/dhher/ros2_ws/install/rover_gazebosim/share/rover_gazebosim/meshes/Right_rocker.STL</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Grey</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+            <diffuse>0.990196 1 1 1</diffuse>
+            <ambient>0.990196 1 1 1</ambient>
+          </material>
+        </visual>
+        <visual name='root_link_fixed_joint_lump__ball-right-down_visual_19'>
+          <pose>-0.3585780995964853 -0.2484009710326352 -0.1232704228353337 -2.849976781616171e-07 0.381792653587085 -1.528355377349383e-06</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>file:///home/dhher/ros2_ws/install/rover_gazebosim/share/rover_gazebosim/meshes/ball-right-down.STL</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <diffuse>0.813726 0.77451 0.735294 1</diffuse>
+            <ambient>0.813726 0.77451 0.735294 1</ambient>
+          </material>
+        </visual>
+        <visual name='root_link_fixed_joint_lump__sensor_laser_visual_20'>
+          <pose>2.819461475400686e-08 1.481339073627908e-08 0.2 0 0 -1.071795863401145e-07</pose>
+          <geometry>
+            <cylinder>
+              <length>0.050000000000000003</length>
+              <radius>0.050000000000000003</radius>
+            </cylinder>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <ambient>1 1 1 1</ambient>
+          </material>
+        </visual>
+        <self_collide>true</self_collide>
+        <sensor name='rgbd_camera_name' type='rgbd_camera'>
+          <camera>
+            <horizontal_fov>1.5708</horizontal_fov>
+            <image>
+              <width>640</width>
+              <height>360</height>
+            </image>
+            <clip>
+              <near>0.10000000000000001</near>
+              <far>100</far>
+            </clip>
+          </camera>
+          <always_on>true</always_on>
+          <update_rate>30</update_rate>
+          <visualize>true</visualize>
+          <topic>rgbd_camera</topic>
+          <enable_metrics>true</enable_metrics>
+          <pose>0.340641 -1.13416e-07 0.49 0 -0 2.6e-06</pose>
+          <origin rpy='0 0 0' xyz='0 0 0'/>
+          <gz_frame_id>camera_link</gz_frame_id>
+        </sensor>
+        <sensor name='imu_sensor' type='imu'>
+          <pose>0 0 0.1 0 -0 3.14159</pose>
+          <topic>imu</topic>
+          <update_rate>100</update_rate>
+          <enable_metrics>false</enable_metrics>
+          <imu>
+            <orientation_reference_frame>
+              <localization>CUSTOM</localization>
+              <custom_rpy>0 0 0</custom_rpy>
+              <grav_dir_x>1 0 0</grav_dir_x>
+            </orientation_reference_frame>
+            <angular_velocity>
+              <x>
+                <noise type='none'>
+                  <mean>0</mean>
+                  <stddev>0</stddev>
+                  <bias_mean>0</bias_mean>
+                  <bias_stddev>0</bias_stddev>
+                  <dynamic_bias_stddev>0</dynamic_bias_stddev>
+                  <dynamic_bias_correlation_time>0</dynamic_bias_correlation_time>
+                  <precision>0</precision>
+                </noise>
+              </x>
+              <y>
+                <noise type='none'>
+                  <mean>0</mean>
+                  <stddev>0</stddev>
+                  <bias_mean>0</bias_mean>
+                  <bias_stddev>0</bias_stddev>
+                  <dynamic_bias_stddev>0</dynamic_bias_stddev>
+                  <dynamic_bias_correlation_time>0</dynamic_bias_correlation_time>
+                  <precision>0</precision>
+                </noise>
+              </y>
+              <z>
+                <noise type='none'>
+                  <mean>0</mean>
+                  <stddev>0</stddev>
+                  <bias_mean>0</bias_mean>
+                  <bias_stddev>0</bias_stddev>
+                  <dynamic_bias_stddev>0</dynamic_bias_stddev>
+                  <dynamic_bias_correlation_time>0</dynamic_bias_correlation_time>
+                  <precision>0</precision>
+                </noise>
+              </z>
+            </angular_velocity>
+            <linear_acceleration>
+              <x>
+                <noise type='none'>
+                  <mean>0</mean>
+                  <stddev>0</stddev>
+                  <bias_mean>0</bias_mean>
+                  <bias_stddev>0</bias_stddev>
+                  <dynamic_bias_stddev>0</dynamic_bias_stddev>
+                  <dynamic_bias_correlation_time>0</dynamic_bias_correlation_time>
+                  <precision>0</precision>
+                </noise>
+              </x>
+              <y>
+                <noise type='none'>
+                  <mean>0</mean>
+                  <stddev>0</stddev>
+                  <bias_mean>0</bias_mean>
+                  <bias_stddev>0</bias_stddev>
+                  <dynamic_bias_stddev>0</dynamic_bias_stddev>
+                  <dynamic_bias_correlation_time>0</dynamic_bias_correlation_time>
+                  <precision>0</precision>
+                </noise>
+              </y>
+              <z>
+                <noise type='none'>
+                  <mean>0</mean>
+                  <stddev>0</stddev>
+                  <bias_mean>0</bias_mean>
+                  <bias_stddev>0</bias_stddev>
+                  <dynamic_bias_stddev>0</dynamic_bias_stddev>
+                  <dynamic_bias_correlation_time>0</dynamic_bias_correlation_time>
+                  <precision>0</precision>
+                </noise>
+              </z>
+            </linear_acceleration>
+            <enable_orientation>true</enable_orientation>
+          </imu>
+        </sensor>
+        <sensor name='navsat' type='navsat'>
+          <always_on>true</always_on>
+          <update_rate>1</update_rate>
+          <topic>navsat</topic>
+          <pose>-8.62847e-08 -9.51608e-08 0.1 0 -0 3.14159</pose>
+          <gps/>
+          <gz_frame_id>imu_link</gz_frame_id>
+        </sensor>
+        <self_collide>true</self_collide>
+        <self_collide>true</self_collide>
+        <sensor name='sensor_laser' type='gpu_lidar'>
+          <pose>0 0 0.2 0 0 -3e-06</pose>
+          <topic>lidar</topic>
+          <update_rate>10</update_rate>
+          <enable_metrics>false</enable_metrics>
+          <lidar>
+            <scan>
+              <horizontal>
+                <samples>640</samples>
+                <resolution>1</resolution>
+                <min_angle>-3.1400000000000001</min_angle>
+                <max_angle>3.1400000000000001</max_angle>
+              </horizontal>
+              <vertical>
+                <samples>16</samples>
+                <min_angle>-3.1400000000000001</min_angle>
+                <max_angle>3.1400000000000001</max_angle>
+                <resolution>0.01</resolution>
+              </vertical>
+            </scan>
+            <range>
+              <min>0.080000000000000002</min>
+              <max>10</max>
+              <resolution>0.01</resolution>
+            </range>
+            <noise>
+              <type>none</type>
+              <mean>0</mean>
+              <stddev>0</stddev>
+            </noise>
+            <visibility_mask>4294967295</visibility_mask>
+          </lidar>
+        </sensor>
+        <pose>0 0 0 0 -0 0</pose>
+        <enable_wind>false</enable_wind>
+      </link>
+      <joint name='joint3' type='revolute'>
+        <pose>-0 -0 0 0 -0 -0</pose>
+        <parent>root_link</parent>
+        <child>Left_bogie</child>
+        <axis>
+          <xyz>-0 0 1</xyz>
+          <limit>
+            <lower>-0.5</lower>
+            <upper>0.29999999999999999</upper>
+            <effort>10000</effort>
+            <velocity>1</velocity>
+            <stiffness>100000000</stiffness>
+            <dissipation>1</dissipation>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+            <damping>0</damping>
+            <friction>0</friction>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='Left_bogie'>
+        <pose>0.213906 0.265001 0.027477 1.5708 0.000627 -3.14159</pose>
+        <inertial>
+          <pose>-0.019103 -0.151328 0.062416 0 -0 0</pose>
+          <mass>0.77472700000000005</mass>
+          <inertia>
+            <ixx>0.0019711300000000002</ixx>
+            <ixy>7.1358299999999999e-07</ixy>
+            <ixz>2.7762600000000001e-12</ixz>
+            <iyy>0.0019848000000000001</iyy>
+            <iyz>-1.4931099999999999e-13</iyz>
+            <izz>0.0014194100000000001</izz>
+          </inertia>
+        </inertial>
+        <collision name='Left_bogie_collision'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>file:///home/dhher/ros2_ws/install/rover_gazebosim/share/rover_gazebosim/meshes/Left_bogie.STL</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='Left_bogie_visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>file:///home/dhher/ros2_ws/install/rover_gazebosim/share/rover_gazebosim/meshes/Left_bogie.STL</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/DarkGrey</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+            <diffuse>0.990196 1 1 1</diffuse>
+            <ambient>0.990196 1 1 1</ambient>
+          </material>
+        </visual>
+        <self_collide>true</self_collide>
+        <enable_wind>false</enable_wind>
+      </link>
+      <joint name='wheel_joint_5' type='revolute'>
+        <pose>0 0 -0 -0 0 -0</pose>
+        <parent>Left_bogie</parent>
+        <child>wheel_5</child>
+        <axis>
+          <xyz>0.662098 0.060914 -0.746938</xyz>
+          <limit>
+            <lower>-10000000000000000</lower>
+            <upper>10000000000000000</upper>
+            <effort>inf</effort>
+            <velocity>inf</velocity>
+            <stiffness>100000000</stiffness>
+            <dissipation>1</dissipation>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+            <damping>0</damping>
+            <friction>0</friction>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='wheel_5'>
+        <pose>0.022028 0.306136 -0.167644 1.8255 0.357291 0.784858</pose>
+        <inertial>
+          <pose>0.132316 0.03208 -0.12773 0 -0 0</pose>
+          <mass>1.5693299999999999</mass>
+          <inertia>
+            <ixx>0.010334400000000001</ixx>
+            <ixy>0.000206987</ixy>
+            <ixz>-0.0025406600000000001</ixz>
+            <iyy>0.0081006399999999992</iyy>
+            <iyz>-0.00023334399999999999</iyz>
+            <izz>0.0109493</izz>
+          </inertia>
+        </inertial>
+        <collision name='wheel_5_collision'>
+          <pose>-0.01 -0.025 -0.01 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>file:///home/dhher/ros2_ws/install/rover_gazebosim/share/rover_gazebosim/meshes/wheel_5.STL</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='wheel_5_visual'>
+          <pose>-0.01 -0.025 -0.01 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>file:///home/dhher/ros2_ws/install/rover_gazebosim/share/rover_gazebosim/meshes/wheel_5.STL</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Trunk</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+            <diffuse>0.990196 1 1 1</diffuse>
+            <ambient>0.990196 1 1 1</ambient>
+          </material>
+        </visual>
+        <self_collide>true</self_collide>
+        <enable_wind>false</enable_wind>
+      </link>
+      <joint name='wheel_joint_6' type='revolute'>
+        <pose>0 -0 0 0 0 0</pose>
+        <parent>Left_bogie</parent>
+        <child>wheel_6</child>
+        <axis>
+          <xyz>0.662098 0.060914 -0.746938</xyz>
+          <limit>
+            <lower>-10000000000000000</lower>
+            <upper>10000000000000000</upper>
+            <effort>inf</effort>
+            <velocity>inf</velocity>
+            <stiffness>100000000</stiffness>
+            <dissipation>1</dissipation>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+            <damping>0</damping>
+            <friction>0</friction>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='wheel_6'>
+        <pose>0.449155 0.306136 -0.147516 1.8255 0.357288 0.784856</pose>
+        <inertial>
+          <pose>0.123984 0.052878 -0.133419 0 -0 0</pose>
+          <mass>1.5693299999999999</mass>
+          <inertia>
+            <ixx>0.010334400000000001</ixx>
+            <ixy>0.000206987</ixy>
+            <ixz>-0.0025406600000000001</ixz>
+            <iyy>0.0081006399999999992</iyy>
+            <iyz>-0.00023334399999999999</iyz>
+            <izz>0.0109493</izz>
+          </inertia>
+        </inertial>
+        <collision name='wheel_6_collision'>
+          <pose>-0.01 -0.025 -0.01 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>file:///home/dhher/ros2_ws/install/rover_gazebosim/share/rover_gazebosim/meshes/wheel_5.STL</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='wheel_6_visual'>
+          <pose>-0.01 -0.025 -0.01 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>file:///home/dhher/ros2_ws/install/rover_gazebosim/share/rover_gazebosim/meshes/wheel_5.STL</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Trunk</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+            <diffuse>0.990196 1 1 1</diffuse>
+            <ambient>0.990196 1 1 1</ambient>
+          </material>
+        </visual>
+        <self_collide>true</self_collide>
+        <enable_wind>false</enable_wind>
+      </link>
+      <joint name='wheel_joint_4' type='revolute'>
+        <pose>0 -0 -0 0 -0 0</pose>
+        <parent>root_link</parent>
+        <child>wheel_4</child>
+        <axis>
+          <xyz>0.662098 0.060914 -0.746938</xyz>
+          <limit>
+            <lower>-10000000000000000</lower>
+            <upper>10000000000000000</upper>
+            <effort>inf</effort>
+            <velocity>inf</velocity>
+            <stiffness>100000000</stiffness>
+            <dissipation>1</dissipation>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+            <damping>0</damping>
+            <friction>0</friction>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='wheel_4'>
+        <pose>-0.44922 0.306136 -0.193371 -2.62743 0.752902 2.00468</pose>
+        <inertial>
+          <pose>0.144439 0.055848 -0.115046 0 -0 0</pose>
+          <mass>1.5693299999999999</mass>
+          <inertia>
+            <ixx>0.010334100000000001</ixx>
+            <ixy>0.00020673299999999999</ixy>
+            <ixz>-0.0025407300000000002</ixz>
+            <iyy>0.0081008899999999995</iyy>
+            <iyz>-0.000233942</iyz>
+            <izz>0.0109494</izz>
+          </inertia>
+        </inertial>
+        <collision name='wheel_4_collision'>
+          <pose>-0.03 -0.035 -0.02 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>file:///home/dhher/ros2_ws/install/rover_gazebosim/share/rover_gazebosim/meshes/wheel_4.STL</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='wheel_4_visual'>
+          <pose>-0.03 -0.035 -0.02 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>file:///home/dhher/ros2_ws/install/rover_gazebosim/share/rover_gazebosim/meshes/wheel_4.STL</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Trunk</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+            <diffuse>0.990196 1 1 1</diffuse>
+            <ambient>0.990196 1 1 1</ambient>
+          </material>
+        </visual>
+        <self_collide>true</self_collide>
+        <enable_wind>false</enable_wind>
+      </link>
+      <joint name='joint4' type='revolute'>
+        <pose>0 0 0 0 -0 0</pose>
+        <parent>root_link</parent>
+        <child>Right_bogie</child>
+        <axis>
+          <xyz>0 0 1</xyz>
+          <limit>
+            <lower>-0.5</lower>
+            <upper>0.29999999999999999</upper>
+            <effort>10000</effort>
+            <velocity>1</velocity>
+            <stiffness>100000000</stiffness>
+            <dissipation>1</dissipation>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+            <damping>0</damping>
+            <friction>0</friction>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='Right_bogie'>
+        <pose>0.219562 -0.447 0.043242 1.5708 0.046311 -3.14159</pose>
+        <inertial>
+          <pose>-5.8e-05 -0.172764 0.119584 0 -0 0</pose>
+          <mass>0.77472700000000005</mass>
+          <inertia>
+            <ixx>0.00197109</ixx>
+            <ixy>-9.8362099999999996e-08</ixy>
+            <ixz>2.7802399999999999e-12</ixz>
+            <iyy>0.0019848399999999999</iyy>
+            <iyz>1.5095300000000001e-14</iyz>
+            <izz>0.0014194100000000001</izz>
+          </inertia>
+        </inertial>
+        <collision name='Right_bogie_collision'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>file:///home/dhher/ros2_ws/install/rover_gazebosim/share/rover_gazebosim/meshes/Right_bogie.STL</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='Right_bogie_visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>file:///home/dhher/ros2_ws/install/rover_gazebosim/share/rover_gazebosim/meshes/Right_bogie.STL</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/DarkGrey</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+            <diffuse>0.990196 1 1 1</diffuse>
+            <ambient>0.990196 1 1 1</ambient>
+          </material>
+        </visual>
+        <self_collide>true</self_collide>
+        <enable_wind>false</enable_wind>
+      </link>
+      <joint name='wheel_joint_2' type='revolute'>
+        <pose>0 0 0 0 -0 0</pose>
+        <parent>Right_bogie</parent>
+        <child>wheel_2</child>
+        <axis>
+          <xyz>-0.662098 -0.060914 0.746938</xyz>
+          <limit>
+            <lower>-10000000000000000</lower>
+            <upper>10000000000000000</upper>
+            <effort>inf</effort>
+            <velocity>inf</velocity>
+            <stiffness>100000000</stiffness>
+            <dissipation>1</dissipation>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+            <damping>0</damping>
+            <friction>0</friction>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='wheel_2'>
+        <pose>0.014612 -0.447001 -0.181627 -2.88721 0.818583 -1.3213</pose>
+        <inertial>
+          <pose>0.029232 0.007113 -0.032552 0 -0 0</pose>
+          <mass>1.5693299999999999</mass>
+          <inertia>
+            <ixx>0.010334400000000001</ixx>
+            <ixy>0.000206987</ixy>
+            <ixz>-0.0025406600000000001</ixz>
+            <iyy>0.0081006399999999992</iyy>
+            <iyz>-0.00023334399999999999</iyz>
+            <izz>0.0109493</izz>
+          </inertia>
+        </inertial>
+        <collision name='wheel_2_collision'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>file:///home/dhher/ros2_ws/install/rover_gazebosim/share/rover_gazebosim/meshes/wheel_2.STL</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='wheel_2_visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>file:///home/dhher/ros2_ws/install/rover_gazebosim/share/rover_gazebosim/meshes/wheel_2.STL</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Trunk</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+            <diffuse>0.990196 1 1 1</diffuse>
+            <ambient>0.990196 1 1 1</ambient>
+          </material>
+        </visual>
+        <self_collide>true</self_collide>
+        <enable_wind>false</enable_wind>
+      </link>
+      <joint name='wheel_joint_3' type='revolute'>
+        <pose>-0 0 0 0 -0 0</pose>
+        <parent>Right_bogie</parent>
+        <child>wheel_3</child>
+        <axis>
+          <xyz>-0.662098 -0.060914 0.746938</xyz>
+          <limit>
+            <lower>-10000000000000000</lower>
+            <upper>10000000000000000</upper>
+            <effort>inf</effort>
+            <velocity>inf</velocity>
+            <stiffness>100000000</stiffness>
+            <dissipation>1</dissipation>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+            <damping>0</damping>
+            <friction>0</friction>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='wheel_3'>
+        <pose>0.444431 -0.447001 -0.161707 -2.88721 0.818583 -1.3213</pose>
+        <inertial>
+          <pose>0.029267 0.004792 -0.032711 0 -0 0</pose>
+          <mass>1.5693299999999999</mass>
+          <inertia>
+            <ixx>0.0103345</ixx>
+            <ixy>0.00020721199999999999</ixy>
+            <ixz>-0.00254097</ixz>
+            <iyy>0.0081011499999999997</iyy>
+            <iyz>-0.000232962</iyz>
+            <izz>0.0109487</izz>
+          </inertia>
+        </inertial>
+        <collision name='wheel_3_collision'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>file:///home/dhher/ros2_ws/install/rover_gazebosim/share/rover_gazebosim/meshes/wheel_3.STL</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='wheel_3_visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>file:///home/dhher/ros2_ws/install/rover_gazebosim/share/rover_gazebosim/meshes/wheel_3.STL</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Trunk</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+            <diffuse>0.990196 1 1 1</diffuse>
+            <ambient>0.990196 1 1 1</ambient>
+          </material>
+        </visual>
+        <self_collide>true</self_collide>
+        <enable_wind>false</enable_wind>
+      </link>
+      <joint name='wheel_joint_1' type='revolute'>
+        <pose>0 0 -0 0 0 -0</pose>
+        <parent>root_link</parent>
+        <child>wheel_1</child>
+        <axis>
+          <xyz>-0.662098 -0.060914 0.746938</xyz>
+          <limit>
+            <lower>-10000000000000000</lower>
+            <upper>10000000000000000</upper>
+            <effort>inf</effort>
+            <velocity>inf</velocity>
+            <stiffness>100000000</stiffness>
+            <dissipation>1</dissipation>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+            <damping>0</damping>
+            <friction>0</friction>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='wheel_1'>
+        <pose>-0.451038 -0.447001 -0.18117 -2.95365 0.828925 -1.37006</pose>
+        <inertial>
+          <pose>0.026292 -0.002922 -0.035977 0 -0 0</pose>
+          <mass>1.5693299999999999</mass>
+          <inertia>
+            <ixx>0.010334400000000001</ixx>
+            <ixy>0.000206987</ixy>
+            <ixz>-0.0025406600000000001</ixz>
+            <iyy>0.0081006399999999992</iyy>
+            <iyz>-0.00023334399999999999</iyz>
+            <izz>0.0109493</izz>
+          </inertia>
+        </inertial>
+        <collision name='wheel_1_collision'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>file:///home/dhher/ros2_ws/install/rover_gazebosim/share/rover_gazebosim/meshes/wheel_1.STL</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='wheel_1_visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>file:///home/dhher/ros2_ws/install/rover_gazebosim/share/rover_gazebosim/meshes/wheel_1.STL</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Trunk</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+            <diffuse>0.990196 1 1 1</diffuse>
+            <ambient>0.990196 1 1 1</ambient>
+          </material>
+        </visual>
+        <self_collide>true</self_collide>
+        <enable_wind>false</enable_wind>
+      </link>
+      <plugin name='ignition::gazebo::systems::DiffDrive' filename='libignition-gazebo-diff-drive-system.so'>
+        <ros>
+          <namespace>/demo</namespace>
+        </ros>
+        <num_wheel_pairs>3</num_wheel_pairs>
+        <left_joint>wheel_joint_4</left_joint>
+        <left_joint>wheel_joint_5</left_joint>
+        <left_joint>wheel_joint_6</left_joint>
+        <right_joint>wheel_joint_1</right_joint>
+        <right_joint>wheel_joint_2</right_joint>
+        <right_joint>wheel_joint_3</right_joint>
+        <wheel_separation>0.43</wheel_separation>
+        <wheel_radius>0.1075</wheel_radius>
+        <odometry_source/>
+        <frame_id>odom</frame_id>
+        <child_frame_id>root_link</child_frame_id>
+        <publish_odom>true</publish_odom>
+        <publish_odom_tf>true</publish_odom_tf>
+        <update_rate>100.0</update_rate>
+        <publish_wheel_tf>true</publish_wheel_tf>
+        <odom_publish_frequency>50</odom_publish_frequency>
+        <topic>cmd_vel</topic>
+      </plugin>
+      <plugin name='ignition::gazebo::systems::Sensors' filename='libignition-gazebo-sensors-system.so'>
+        <render_engine>ogre2</render_engine>
+      </plugin>
+      <plugin name='ignition::gazebo::systems::TriggeredPublisher' filename='libignition-gazebo-triggered-publisher-system.so'>
+        <input topic='/keyboard/keypress' type='ignition.msgs.Int32'>
+          <match field='data'>16777235</match>
+        </input>
+        <output topic='/cmd_vel' type='ignition.msgs.Twist'>linear: {x: 1.5}, angular: {z: 0.0}</output>
+      </plugin>
+      <plugin name='ignition::gazebo::systems::TriggeredPublisher' filename='libignition-gazebo-triggered-publisher-system.so'>
+        <input topic='/keyboard/keypress' type='ignition.msgs.Int32'>
+          <match field='data'>16777237</match>
+        </input>
+        <output topic='/cmd_vel' type='ignition.msgs.Twist'>linear: {x: -1.5}, angular: {z: 0.0}</output>
+      </plugin>
+      <plugin name='ignition::gazebo::systems::TriggeredPublisher' filename='libignition-gazebo-triggered-publisher-system.so'>
+        <input topic='/keyboard/keypress' type='ignition.msgs.Int32'>
+          <match field='data'>16777236</match>
+        </input>
+        <output topic='/cmd_vel' type='ignition.msgs.Twist'>linear: {x: 0.0}, angular: {z: -1.5}</output>
+      </plugin>
+      <plugin name='ignition::gazebo::systems::TriggeredPublisher' filename='libignition-gazebo-triggered-publisher-system.so'>
+        <input topic='/keyboard/keypress' type='ignition.msgs.Int32'>
+          <match field='data'>16777234</match>
+        </input>
+        <output topic='/cmd_vel' type='ignition.msgs.Twist'>linear: {x: 0.0}, angular: {z: 1.5}</output>
+      </plugin>
+      <frame name='camera_optical_joint' attached_to='camera_link'>
+        <pose>0 0 0 -1.5708 -0 -1.5708</pose>
+      </frame>
+      <frame name='camera_link_optical' attached_to='camera_optical_joint'/>
+      <frame name='camera_joint' attached_to='base_link'>
+        <pose>-0.064219 -0.526119 0.70368 0 -0 -3.14159</pose>
+      </frame>
+      <frame name='camera_link' attached_to='camera_joint'/>
+      <frame name='s-joint-6l' attached_to='left-rod'>
+        <pose>0.009408 -0.26698 0.003391 2.7957 0 1.5708</pose>
+      </frame>
+      <frame name='socket-left-down' attached_to='s-joint-6l'/>
+      <frame name='s-joint-5l' attached_to='socket-left'>
+        <pose>0 0 0 0 1.5252 1.5708</pose>
+      </frame>
+      <frame name='left-rod' attached_to='s-joint-5l'/>
+      <frame name='ball-socket-left' attached_to='triangle-ball-left'>
+        <pose>0 0 0 -0.89006 1.4692 -0.17888</pose>
+      </frame>
+      <frame name='socket-left' attached_to='ball-socket-left'/>
+      <frame name='ball-left' attached_to='triangle-left'>
+        <pose>0.21 0 -0.0256 -1.5708 -0 -0.11925</pose>
+      </frame>
+      <frame name='triangle-ball-left' attached_to='ball-left'/>
+      <frame name='s-joint-left-down' attached_to='triangle-left'>
+        <pose>0 -0.1116 -0.01 -3.14159 -0 -3.1221</pose>
+      </frame>
+      <frame name='triangle-connector' attached_to='s-joint-left-down'/>
+      <frame name='s-joint-left' attached_to='connector-link-1'>
+        <pose>0.038 0 0 1.5708 -1.5513 -1.5708</pose>
+      </frame>
+      <frame name='triangle-left' attached_to='s-joint-left'/>
+      <frame name='fix-joint-1' attached_to='base_link'>
+        <pose>0.57075 -0.57612 0.38409 1.5708 -0 0</pose>
+      </frame>
+      <frame name='connector-link-1' attached_to='fix-joint-1'/>
+      <frame name='s-joint-6r' attached_to='right-rod'>
+        <pose>-0.004403 -0.26363 0.008979 1.1149 -0 1.5708</pose>
+      </frame>
+      <frame name='socket-right-down' attached_to='s-joint-6r'/>
+      <frame name='s-joint-5r' attached_to='socket-right'>
+        <pose>0.004428 0 0 0 0.46215 1.5708</pose>
+      </frame>
+      <frame name='right-rod' attached_to='s-joint-5r'/>
+      <frame name='ball-socket-right' attached_to='triangle-ball-right'>
+        <pose>0 0 0 -2.1439 -1.5681 2.1943</pose>
+      </frame>
+      <frame name='socket-right' attached_to='ball-socket-right'/>
+      <frame name='ball-right' attached_to='triangle-right'>
+        <pose>0.21 0 0.0256 1.5708 -0 -0.056761</pose>
+      </frame>
+      <frame name='triangle-ball-right' attached_to='ball-right'/>
+      <frame name='s-joint-right' attached_to='connector-link-2'>
+        <pose>0.038 0 0 1.5708 1.5513 1.5708</pose>
+      </frame>
+      <frame name='triangle-right' attached_to='s-joint-right'/>
+      <frame name='fix-joint-2' attached_to='base_link'>
+        <pose>0.57075 -0.47612 0.38409 1.5708 -0 0</pose>
+      </frame>
+      <frame name='connector-link-2' attached_to='fix-joint-2'/>
+      <frame name='imu_joint' attached_to='base_link'>
+        <pose>0.276422 -0.526119 0.31368 0 -0 0</pose>
+      </frame>
+      <frame name='imu_link' attached_to='imu_joint'/>
+      <frame name='s-joint-8l' attached_to='Left_rocker'>
+        <pose>0.31476 -0.27334 -0.0146 -1.5708 -0 -2.9303</pose>
+      </frame>
+      <frame name='ball-left-down' attached_to='s-joint-8l'/>
+      <frame name='joint1' attached_to='base_link'>
+        <pose>0.29675 -0.78912 0.33409 1.5708 -0.06648 -0</pose>
+      </frame>
+      <frame name='Left_rocker' attached_to='joint1'/>
+      <frame name='s-joint-8r' attached_to='Right_rocker'>
+        <pose>0.33825 -0.24368 0.1986 1.5708 -0 -2.7598</pose>
+      </frame>
+      <frame name='ball-right-down' attached_to='s-joint-8r'/>
+      <frame name='joint2' attached_to='base_link'>
+        <pose>0.29675 -0.079119 0.33409 1.5708 -0 0</pose>
+      </frame>
+      <frame name='Right_rocker' attached_to='joint2'/>
+      <frame name='joint_sensor_laser' attached_to='base_link'>
+        <pose>0.276422 -0.526119 0.41368 0 -0 3.14159</pose>
+      </frame>
+      <frame name='sensor_laser' attached_to='joint_sensor_laser'/>
+      <frame name='joint_root' attached_to='root_link'>
+        <pose>0.276422 -0.526119 -0.21368 0 -0 3.14159</pose>
+      </frame>
+      <frame name='base_link' attached_to='joint_root'/>
+      <pose>1.27076 -0.082116 0.292579 -0.010874 0.047102 -0.095442</pose>
+      <static>false</static>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='cylinder'>
+      <pose>1.06557 -2.22519 0.5 0 -0 0</pose>
+      <link name='cylinder_link'>
+        <inertial>
+          <inertia>
+            <ixx>0.14580000000000001</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.14580000000000001</iyy>
+            <iyz>0</iyz>
+            <izz>0.125</izz>
+          </inertia>
+          <mass>1</mass>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <collision name='cylinder_collision'>
+          <geometry>
+            <cylinder>
+              <radius>0.5</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <visual name='cylinder_visual'>
+          <geometry>
+            <cylinder>
+              <radius>0.5</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.3 0.3 0.3 1</ambient>
+            <diffuse>0.7 0.7 0.7 1</diffuse>
+            <specular>1 1 1 1</specular>
+          </material>
+        </visual>
+        <pose>0 0 0 0 -0 0</pose>
+        <enable_wind>false</enable_wind>
+      </link>
+      <static>false</static>
+      <self_collide>false</self_collide>
+    </model>
+    <light name='sun' type='directional'>
+      <pose>0 0 10 0 -0 0</pose>
+      <cast_shadows>true</cast_shadows>
+      <intensity>1</intensity>
+      <direction>-0.5 0.1 -0.9</direction>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <linear>0.01</linear>
+        <constant>0.90000000000000002</constant>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <spot>
+        <inner_angle>0</inner_angle>
+        <outer_angle>0</outer_angle>
+        <falloff>0</falloff>
+      </spot>
+    </light>
+  </world>
+</sdf>

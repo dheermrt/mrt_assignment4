@@ -1,0 +1,4 @@
+rm -rf build log install
+colcon build --symlink-install --packages-select rover_gazebosim 
+source install/setup.zsh 
+ros2 launch rover_gazebosim spawn_rover.launch.py 
