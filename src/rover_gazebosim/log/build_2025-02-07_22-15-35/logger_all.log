@@ -1,0 +1,103 @@
+[0.262s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--symlink-install', '--packages-select', 'rover_gazebosim']
+[0.262s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=True, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=16, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=['rover_gazebosim'], packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x7442bc619240>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7442bc772170>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7442bc772170>>, mixin_verb=('build',))
+[0.676s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.676s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.676s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.676s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.677s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.677s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.677s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/dhher/mrt_ws/src/rover_gazebosim'
+[0.677s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.677s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.677s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.677s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.678s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.678s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.678s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.678s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.678s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.707s] DEBUG:colcon.colcon_core.package_identification:Package '.' with type 'ros.ament_cmake' and name 'rover_gazebosim'
+[0.708s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.708s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.708s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.708s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.708s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.780s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.780s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.788s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 332 installed packages in /opt/ros/humble
+[0.792s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.895s] Level 5:colcon.colcon_core.verb:set package 'rover_gazebosim' build argument 'cmake_args' from command line to 'None'
+[0.895s] Level 5:colcon.colcon_core.verb:set package 'rover_gazebosim' build argument 'cmake_target' from command line to 'None'
+[0.895s] Level 5:colcon.colcon_core.verb:set package 'rover_gazebosim' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.895s] Level 5:colcon.colcon_core.verb:set package 'rover_gazebosim' build argument 'cmake_clean_cache' from command line to 'False'
+[0.895s] Level 5:colcon.colcon_core.verb:set package 'rover_gazebosim' build argument 'cmake_clean_first' from command line to 'False'
+[0.895s] Level 5:colcon.colcon_core.verb:set package 'rover_gazebosim' build argument 'cmake_force_configure' from command line to 'False'
+[0.895s] Level 5:colcon.colcon_core.verb:set package 'rover_gazebosim' build argument 'ament_cmake_args' from command line to 'None'
+[0.895s] Level 5:colcon.colcon_core.verb:set package 'rover_gazebosim' build argument 'catkin_cmake_args' from command line to 'None'
+[0.895s] Level 5:colcon.colcon_core.verb:set package 'rover_gazebosim' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.895s] DEBUG:colcon.colcon_core.verb:Building package 'rover_gazebosim' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/dhher/mrt_ws/src/rover_gazebosim/build/rover_gazebosim', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/dhher/mrt_ws/src/rover_gazebosim/install/rover_gazebosim', 'merge_install': False, 'path': '/home/dhher/mrt_ws/src/rover_gazebosim', 'symlink_install': True, 'test_result_base': None}
+[0.896s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.898s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.899s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/dhher/mrt_ws/src/rover_gazebosim' with build type 'ament_cmake'
+[0.899s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/dhher/mrt_ws/src/rover_gazebosim'
+[0.905s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.906s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.906s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.927s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/dhher/mrt_ws/src/rover_gazebosim/build/rover_gazebosim': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/dhher/mrt_ws/src/rover_gazebosim -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/dhher/mrt_ws/src/rover_gazebosim/install/rover_gazebosim
+[6.710s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/dhher/mrt_ws/src/rover_gazebosim/build/rover_gazebosim' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/dhher/mrt_ws/src/rover_gazebosim -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/dhher/mrt_ws/src/rover_gazebosim/install/rover_gazebosim
+[6.715s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/dhher/mrt_ws/src/rover_gazebosim/build/rover_gazebosim': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/dhher/mrt_ws/src/rover_gazebosim/build/rover_gazebosim -- -j16 -l16
+[6.823s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/dhher/mrt_ws/src/rover_gazebosim/build/rover_gazebosim' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/dhher/mrt_ws/src/rover_gazebosim/build/rover_gazebosim -- -j16 -l16
+[6.849s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/dhher/mrt_ws/src/rover_gazebosim/build/rover_gazebosim': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/dhher/mrt_ws/src/rover_gazebosim/build/rover_gazebosim
+[8.111s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rover_gazebosim)
+[8.112s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/dhher/mrt_ws/src/rover_gazebosim/build/rover_gazebosim' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/dhher/mrt_ws/src/rover_gazebosim/build/rover_gazebosim
+[8.120s] Level 1:colcon.colcon_core.environment:checking '/home/dhher/mrt_ws/src/rover_gazebosim/install/rover_gazebosim' for CMake module files
+[8.121s] Level 1:colcon.colcon_core.environment:checking '/home/dhher/mrt_ws/src/rover_gazebosim/install/rover_gazebosim' for CMake config files
+[8.122s] Level 1:colcon.colcon_core.shell:create_environment_hook('rover_gazebosim', 'cmake_prefix_path')
+[8.122s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dhher/mrt_ws/src/rover_gazebosim/install/rover_gazebosim/share/rover_gazebosim/hook/cmake_prefix_path.ps1'
+[8.124s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/dhher/mrt_ws/src/rover_gazebosim/install/rover_gazebosim/share/rover_gazebosim/hook/cmake_prefix_path.dsv'
+[8.125s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dhher/mrt_ws/src/rover_gazebosim/install/rover_gazebosim/share/rover_gazebosim/hook/cmake_prefix_path.sh'
+[8.127s] Level 1:colcon.colcon_core.environment:checking '/home/dhher/mrt_ws/src/rover_gazebosim/install/rover_gazebosim/bin'
+[8.127s] Level 1:colcon.colcon_core.environment:checking '/home/dhher/mrt_ws/src/rover_gazebosim/install/rover_gazebosim/lib/pkgconfig/rover_gazebosim.pc'
+[8.127s] Level 1:colcon.colcon_core.environment:checking '/home/dhher/mrt_ws/src/rover_gazebosim/install/rover_gazebosim/lib/python3.10/site-packages'
+[8.128s] Level 1:colcon.colcon_core.environment:checking '/home/dhher/mrt_ws/src/rover_gazebosim/install/rover_gazebosim/bin'
+[8.128s] INFO:colcon.colcon_core.shell:Creating package script '/home/dhher/mrt_ws/src/rover_gazebosim/install/rover_gazebosim/share/rover_gazebosim/package.ps1'
+[8.130s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/dhher/mrt_ws/src/rover_gazebosim/install/rover_gazebosim/share/rover_gazebosim/package.dsv'
+[8.131s] INFO:colcon.colcon_core.shell:Creating package script '/home/dhher/mrt_ws/src/rover_gazebosim/install/rover_gazebosim/share/rover_gazebosim/package.sh'
+[8.133s] INFO:colcon.colcon_core.shell:Creating package script '/home/dhher/mrt_ws/src/rover_gazebosim/install/rover_gazebosim/share/rover_gazebosim/package.bash'
+[8.134s] INFO:colcon.colcon_core.shell:Creating package script '/home/dhher/mrt_ws/src/rover_gazebosim/install/rover_gazebosim/share/rover_gazebosim/package.zsh'
+[8.136s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/dhher/mrt_ws/src/rover_gazebosim/install/rover_gazebosim/share/colcon-core/packages/rover_gazebosim)
+[8.137s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rover_gazebosim)
+[8.138s] Level 1:colcon.colcon_core.environment:checking '/home/dhher/mrt_ws/src/rover_gazebosim/install/rover_gazebosim' for CMake module files
+[8.139s] Level 1:colcon.colcon_core.environment:checking '/home/dhher/mrt_ws/src/rover_gazebosim/install/rover_gazebosim' for CMake config files
+[8.140s] Level 1:colcon.colcon_core.shell:create_environment_hook('rover_gazebosim', 'cmake_prefix_path')
+[8.140s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dhher/mrt_ws/src/rover_gazebosim/install/rover_gazebosim/share/rover_gazebosim/hook/cmake_prefix_path.ps1'
+[8.141s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/dhher/mrt_ws/src/rover_gazebosim/install/rover_gazebosim/share/rover_gazebosim/hook/cmake_prefix_path.dsv'
+[8.142s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dhher/mrt_ws/src/rover_gazebosim/install/rover_gazebosim/share/rover_gazebosim/hook/cmake_prefix_path.sh'
+[8.143s] Level 1:colcon.colcon_core.environment:checking '/home/dhher/mrt_ws/src/rover_gazebosim/install/rover_gazebosim/bin'
+[8.143s] Level 1:colcon.colcon_core.environment:checking '/home/dhher/mrt_ws/src/rover_gazebosim/install/rover_gazebosim/lib/pkgconfig/rover_gazebosim.pc'
+[8.143s] Level 1:colcon.colcon_core.environment:checking '/home/dhher/mrt_ws/src/rover_gazebosim/install/rover_gazebosim/lib/python3.10/site-packages'
+[8.144s] Level 1:colcon.colcon_core.environment:checking '/home/dhher/mrt_ws/src/rover_gazebosim/install/rover_gazebosim/bin'
+[8.145s] INFO:colcon.colcon_core.shell:Creating package script '/home/dhher/mrt_ws/src/rover_gazebosim/install/rover_gazebosim/share/rover_gazebosim/package.ps1'
+[8.146s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/dhher/mrt_ws/src/rover_gazebosim/install/rover_gazebosim/share/rover_gazebosim/package.dsv'
+[8.146s] INFO:colcon.colcon_core.shell:Creating package script '/home/dhher/mrt_ws/src/rover_gazebosim/install/rover_gazebosim/share/rover_gazebosim/package.sh'
+[8.147s] INFO:colcon.colcon_core.shell:Creating package script '/home/dhher/mrt_ws/src/rover_gazebosim/install/rover_gazebosim/share/rover_gazebosim/package.bash'
+[8.148s] INFO:colcon.colcon_core.shell:Creating package script '/home/dhher/mrt_ws/src/rover_gazebosim/install/rover_gazebosim/share/rover_gazebosim/package.zsh'
+[8.149s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/dhher/mrt_ws/src/rover_gazebosim/install/rover_gazebosim/share/colcon-core/packages/rover_gazebosim)
+[8.150s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[8.150s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[8.150s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[8.150s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[8.162s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[8.162s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[8.162s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[8.206s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[8.206s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/dhher/mrt_ws/src/rover_gazebosim/install/local_setup.ps1'
+[8.208s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/dhher/mrt_ws/src/rover_gazebosim/install/_local_setup_util_ps1.py'
+[8.212s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/dhher/mrt_ws/src/rover_gazebosim/install/setup.ps1'
+[8.214s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/dhher/mrt_ws/src/rover_gazebosim/install/local_setup.sh'
+[8.215s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/dhher/mrt_ws/src/rover_gazebosim/install/_local_setup_util_sh.py'
+[8.216s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/dhher/mrt_ws/src/rover_gazebosim/install/setup.sh'
+[8.218s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/dhher/mrt_ws/src/rover_gazebosim/install/local_setup.bash'
+[8.220s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/dhher/mrt_ws/src/rover_gazebosim/install/setup.bash'
+[8.222s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/dhher/mrt_ws/src/rover_gazebosim/install/local_setup.zsh'
+[8.223s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/dhher/mrt_ws/src/rover_gazebosim/install/setup.zsh'

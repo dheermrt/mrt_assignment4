@@ -1,0 +1,247 @@
+[0.000000] (-) TimerEvent: {}
+[0.000364] (rover_gazebosim) JobQueued: {'identifier': 'rover_gazebosim', 'dependencies': OrderedDict()}
+[0.001813] (rover_gazebosim) JobStarted: {'identifier': 'rover_gazebosim'}
+[0.022112] (rover_gazebosim) JobProgress: {'identifier': 'rover_gazebosim', 'progress': 'cmake'}
+[0.023727] (rover_gazebosim) Command: {'cmd': ['/usr/bin/cmake', '/home/dhher/mrt_ws/src/rover_gazebosim', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/dhher/mrt_ws/src/rover_gazebosim/install/rover_gazebosim'], 'cwd': '/home/dhher/mrt_ws/src/rover_gazebosim/build/rover_gazebosim', 'env': OrderedDict([('USER', 'dhher'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('OLDPWD', '/home/dhher/mrt_ws/src/rover_gazebosim/launch'), ('HOME', '/home/dhher'), ('LESS', '-R'), ('DESKTOP_SESSION', 'ubuntu'), ('ZSH', '/home/dhher/.oh-my-zsh'), ('LSCOLORS', 'Gxfxcxdxbxegedabagacad'), ('GTK_MODULES', 'gail:atk-bridge'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('PAGER', 'less'), ('ROS_PYTHON_VERSION', '3'), ('SYSTEMD_EXEC_PID', '1831'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'dhher'), ('_', '/usr/bin/colcon'), ('XDG_SESSION_CLASS', 'user'), ('ROS_VERSION', '2'), ('USERNAME', 'dhher'), ('TERM', 'xterm-kitty'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '7'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/dhher/.fzf/bin'), ('SESSION_MANAGER', 'local/dhher-HP-Pavilion-Laptop-15-eh1xxx:@/tmp/.ICE-unix/1551,unix/dhher-HP-Pavilion-Laptop-15-eh1xxx:/tmp/.ICE-unix/1551'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/2e4a8492_5996_4f96_942a_fd53000f5663'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LANG', 'en_US.UTF-8'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('GNOME_TERMINAL_SERVICE', ':1.126'), ('XMODIFIERS', '@im=ibus'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.6PLH12'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/usr/bin/zsh'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('KITTY_WINDOW_ID', '1'), ('QT_IM_MODULE', 'ibus'), ('LC_ALL', 'en_US.UTF-8'), ('PWD', '/home/dhher/mrt_ws/src/rover_gazebosim/build/rover_gazebosim'), ('XDG_DATA_DIRS', '/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.099434] (-) TimerEvent: {}
+[0.199932] (-) TimerEvent: {}
+[0.219217] (rover_gazebosim) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.300161] (-) TimerEvent: {}
+[0.395683] (rover_gazebosim) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.400314] (-) TimerEvent: {}
+[0.420186] (rover_gazebosim) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.500515] (-) TimerEvent: {}
+[0.601044] (-) TimerEvent: {}
+[0.615010] (rover_gazebosim) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.634224] (rover_gazebosim) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.635302] (rover_gazebosim) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.636734] (rover_gazebosim) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.645190] (rover_gazebosim) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.701216] (-) TimerEvent: {}
+[0.801749] (-) TimerEvent: {}
+[0.858760] (rover_gazebosim) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.877785] (rover_gazebosim) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.878496] (rover_gazebosim) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.879597] (rover_gazebosim) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.889043] (rover_gazebosim) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.901887] (-) TimerEvent: {}
+[1.002385] (-) TimerEvent: {}
+[1.102871] (-) TimerEvent: {}
+[1.203496] (-) TimerEvent: {}
+[1.255193] (rover_gazebosim) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[1.303689] (-) TimerEvent: {}
+[1.404220] (-) TimerEvent: {}
+[1.411773] (rover_gazebosim) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[1.494913] (rover_gazebosim) StdoutLine: {'line': b'-- Found rclpy: 3.3.15 (/opt/ros/humble/share/rclpy/cmake)\n'}
+[1.499087] (rover_gazebosim) StdoutLine: {'line': b'-- Found gazebo_ros: 3.7.0 (/opt/ros/humble/share/gazebo_ros/cmake)\n'}
+[1.504328] (-) TimerEvent: {}
+[1.604741] (-) TimerEvent: {}
+[1.633170] (rover_gazebosim) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[1.647705] (rover_gazebosim) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[1.672163] (rover_gazebosim) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[1.704853] (-) TimerEvent: {}
+[1.708567] (rover_gazebosim) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.754539] (rover_gazebosim) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.805092] (-) TimerEvent: {}
+[1.878712] (rover_gazebosim) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[1.886446] (rover_gazebosim) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[1.905237] (-) TimerEvent: {}
+[2.005672] (-) TimerEvent: {}
+[2.106116] (-) TimerEvent: {}
+[2.145146] (rover_gazebosim) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[2.206333] (-) TimerEvent: {}
+[2.226815] (rover_gazebosim) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[2.306490] (-) TimerEvent: {}
+[2.348438] (rover_gazebosim) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[2.375511] (rover_gazebosim) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[2.406639] (-) TimerEvent: {}
+[2.507065] (-) TimerEvent: {}
+[2.559333] (rover_gazebosim) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[2.559874] (rover_gazebosim) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[2.607191] (-) TimerEvent: {}
+[2.707647] (-) TimerEvent: {}
+[2.743799] (rover_gazebosim) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[2.746345] (rover_gazebosim) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[2.807801] (-) TimerEvent: {}
+[2.908252] (-) TimerEvent: {}
+[2.910211] (rover_gazebosim) StdoutLine: {'line': b'-- Found PkgConfig: /usr/bin/pkg-config (found version "0.29.2") \n'}
+[2.913011] (rover_gazebosim) StdoutLine: {'line': b"-- Checking for module 'bullet>=2.82'\n"}
+[2.950890] (rover_gazebosim) StdoutLine: {'line': b'--   Found bullet, version 3.05\n'}
+[3.008422] (-) TimerEvent: {}
+[3.109095] (-) TimerEvent: {}
+[3.209519] (-) TimerEvent: {}
+[3.269488] (rover_gazebosim) StdoutLine: {'line': b'-- Found fcl: /usr/include (found suitable version "0.7.0", minimum required is "0.5.0") \n'}
+[3.309684] (-) TimerEvent: {}
+[3.410131] (-) TimerEvent: {}
+[3.417139] (rover_gazebosim) StdoutLine: {'line': b'-- Found assimp: /usr/include (found version "5.2.0") \n'}
+[3.482685] (rover_gazebosim) StdoutLine: {'line': b'-- Found DART: /usr/include (Required is at least version "6.6") found components: dart \n'}
+[3.510304] (-) TimerEvent: {}
+[3.561615] (rover_gazebosim) StdoutLine: {'line': b'-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found suitable version "1.74.0", minimum required is "1.40.0") found components: thread system filesystem program_options regex iostreams date_time \n'}
+[3.600383] (rover_gazebosim) StdoutLine: {'line': b'-- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so (found version "3.12.4") \n'}
+[3.610438] (-) TimerEvent: {}
+[3.613526] (rover_gazebosim) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.15.1\n'}
+[3.633307] (rover_gazebosim) StdoutLine: {'line': b'-- Searching for dependencies of ignition-math6\n'}
+[3.637888] (rover_gazebosim) StdoutLine: {'line': b'-- Looking for OGRE...\n'}
+[3.639034] (rover_gazebosim) StdoutLine: {'line': b'-- OGRE_PREFIX_WATCH changed.\n'}
+[3.652511] (rover_gazebosim) StdoutLine: {'line': b"-- Checking for module 'OGRE'\n"}
+[3.689722] (rover_gazebosim) StdoutLine: {'line': b'--   Found OGRE, version 1.9.0\n'}
+[3.710619] (-) TimerEvent: {}
+[3.793386] (rover_gazebosim) StdoutLine: {'line': b'-- Found Ogre Ghadamon (1.9.0)\n'}
+[3.809111] (rover_gazebosim) StdoutLine: {'line': b'-- Found OGRE: optimized;/usr/lib/x86_64-linux-gnu/libOgreMain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreMain.so\n'}
+[3.810687] (-) TimerEvent: {}
+[3.833753] (rover_gazebosim) StdoutLine: {'line': b'-- Looking for OGRE_Paging...\n'}
+[3.845586] (rover_gazebosim) StdoutLine: {'line': b'-- Found OGRE_Paging: optimized;/usr/lib/x86_64-linux-gnu/libOgrePaging.so;debug;/usr/lib/x86_64-linux-gnu/libOgrePaging.so\n'}
+[3.845775] (rover_gazebosim) StdoutLine: {'line': b'-- Looking for OGRE_Terrain...\n'}
+[3.855965] (rover_gazebosim) StdoutLine: {'line': b'-- Found OGRE_Terrain: optimized;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so\n'}
+[3.856398] (rover_gazebosim) StdoutLine: {'line': b'-- Looking for OGRE_Property...\n'}
+[3.867222] (rover_gazebosim) StdoutLine: {'line': b'-- Found OGRE_Property: optimized;/usr/lib/x86_64-linux-gnu/libOgreProperty.so;debug;/usr/lib/x86_64-linux-gnu/libOgreProperty.so\n'}
+[3.867469] (rover_gazebosim) StdoutLine: {'line': b'-- Looking for OGRE_RTShaderSystem...\n'}
+[3.878036] (rover_gazebosim) StdoutLine: {'line': b'-- Found OGRE_RTShaderSystem: optimized;/usr/lib/x86_64-linux-gnu/libOgreRTShaderSystem.so;debug;/usr/lib/x86_64-linux-gnu/libOgreRTShaderSystem.so\n'}
+[3.878277] (rover_gazebosim) StdoutLine: {'line': b'-- Looking for OGRE_Volume...\n'}
+[3.888785] (rover_gazebosim) StdoutLine: {'line': b'-- Found OGRE_Volume: optimized;/usr/lib/x86_64-linux-gnu/libOgreVolume.so;debug;/usr/lib/x86_64-linux-gnu/libOgreVolume.so\n'}
+[3.889042] (rover_gazebosim) StdoutLine: {'line': b'-- Looking for OGRE_Overlay...\n'}
+[3.900076] (rover_gazebosim) StdoutLine: {'line': b'-- Found OGRE_Overlay: optimized;/usr/lib/x86_64-linux-gnu/libOgreOverlay.so;debug;/usr/lib/x86_64-linux-gnu/libOgreOverlay.so\n'}
+[3.910817] (-) TimerEvent: {}
+[4.011184] (-) TimerEvent: {}
+[4.111596] (-) TimerEvent: {}
+[4.161686] (rover_gazebosim) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.15.1\n'}
+[4.168141] (rover_gazebosim) StdoutLine: {'line': b'-- Looking for ignition-transport8 -- found version 8.2.1\n'}
+[4.169237] (rover_gazebosim) StdoutLine: {'line': b'-- Searching for dependencies of ignition-transport8\n'}
+[4.211755] (-) TimerEvent: {}
+[4.222696] (rover_gazebosim) StdoutLine: {'line': b'-- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so (found suitable version "3.12.4", minimum required is "3") \n'}
+[4.258884] (rover_gazebosim) StdoutLine: {'line': b'-- Config-file not installed for ZeroMQ -- checking for pkg-config\n'}
+[4.272061] (rover_gazebosim) StdoutLine: {'line': b"-- Checking for module 'libzmq >= 4'\n"}
+[4.311910] (-) TimerEvent: {}
+[4.313794] (rover_gazebosim) StdoutLine: {'line': b'--   Found libzmq , version 4.3.4\n'}
+[4.412081] (-) TimerEvent: {}
+[4.430497] (rover_gazebosim) StdoutLine: {'line': b'-- Found ZeroMQ: TRUE (Required is at least version "4") \n'}
+[4.446733] (rover_gazebosim) StdoutLine: {'line': b"-- Checking for module 'uuid'\n"}
+[4.485288] (rover_gazebosim) StdoutLine: {'line': b'--   Found uuid, version 2.37.2\n'}
+[4.512245] (-) TimerEvent: {}
+[4.589104] (rover_gazebosim) StdoutLine: {'line': b'-- Found UUID: TRUE  \n'}
+[4.596918] (rover_gazebosim) StdoutLine: {'line': b'-- Looking for ignition-msgs5 -- found version 5.8.1\n'}
+[4.598142] (rover_gazebosim) StdoutLine: {'line': b'-- Searching for dependencies of ignition-msgs5\n'}
+[4.612368] (-) TimerEvent: {}
+[4.653961] (rover_gazebosim) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.15.1\n'}
+[4.668488] (rover_gazebosim) StdoutLine: {'line': b"-- Checking for module 'tinyxml2'\n"}
+[4.706894] (rover_gazebosim) StdoutLine: {'line': b'--   Found tinyxml2, version 9.0.0\n'}
+[4.712498] (-) TimerEvent: {}
+[4.812854] (-) TimerEvent: {}
+[4.814593] (rover_gazebosim) StdoutLine: {'line': b'-- Looking for ignition-msgs5 -- found version 5.8.1\n'}
+[4.821628] (rover_gazebosim) StdoutLine: {'line': b'-- Looking for ignition-common3 -- found version 3.14.0\n'}
+[4.822766] (rover_gazebosim) StdoutLine: {'line': b'-- Searching for dependencies of ignition-common3\n'}
+[4.823842] (rover_gazebosim) StdoutLine: {'line': b'-- Looking for dlfcn.h - found\n'}
+[4.825626] (rover_gazebosim) StdoutLine: {'line': b'-- Looking for libdl - found\n'}
+[4.828925] (rover_gazebosim) StdoutLine: {'line': b'-- Found DL: TRUE  \n'}
+[4.858072] (rover_gazebosim) StdoutLine: {'line': b'-- Found tinyobjloader: /usr/lib/x86_64-linux-gnu/cmake/tinyobjloader/tinyobjloader-config.cmake (found version "2.0.0") \n'}
+[4.859857] (rover_gazebosim) StdoutLine: {'line': b'-- Searching for <ignition-common3> component [graphics]\n'}
+[4.865613] (rover_gazebosim) StdoutLine: {'line': b'-- Looking for ignition-common3-graphics -- found version 3.14.0\n'}
+[4.866812] (rover_gazebosim) StdoutLine: {'line': b'-- Searching for dependencies of ignition-common3-graphics\n'}
+[4.867713] (rover_gazebosim) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.15.1\n'}
+[4.875729] (rover_gazebosim) StdoutLine: {'line': b'-- Looking for ignition-fuel_tools4 -- found version 4.4.0\n'}
+[4.876588] (rover_gazebosim) StdoutLine: {'line': b'-- Searching for dependencies of ignition-fuel_tools4\n'}
+[4.912982] (-) TimerEvent: {}
+[5.013399] (-) TimerEvent: {}
+[5.113977] (rover_gazebosim) StdoutLine: {'line': b'-- Found CURL: /usr/lib/x86_64-linux-gnu/libcurl.so (found version "7.81.0")  \n'}
+[5.114536] (-) TimerEvent: {}
+[5.139680] (rover_gazebosim) StdoutLine: {'line': b"-- Checking for module 'jsoncpp'\n"}
+[5.178783] (rover_gazebosim) StdoutLine: {'line': b'--   Found jsoncpp, version 1.9.5\n'}
+[5.214790] (-) TimerEvent: {}
+[5.282214] (rover_gazebosim) StdoutLine: {'line': b'-- Found JSONCPP: TRUE  \n'}
+[5.299458] (rover_gazebosim) StdoutLine: {'line': b"-- Checking for module 'libzip'\n"}
+[5.314986] (-) TimerEvent: {}
+[5.338249] (rover_gazebosim) StdoutLine: {'line': b'--   Found libzip, version 1.7.3\n'}
+[5.415228] (-) TimerEvent: {}
+[5.446588] (rover_gazebosim) StdoutLine: {'line': b'-- Found ZIP: TRUE  \n'}
+[5.447698] (rover_gazebosim) StdoutLine: {'line': b'-- Looking for ignition-common3 -- found version 3.14.0\n'}
+[5.448707] (rover_gazebosim) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.15.1\n'}
+[5.449720] (rover_gazebosim) StdoutLine: {'line': b'-- Looking for ignition-msgs5 -- found version 5.8.1\n'}
+[5.461011] (rover_gazebosim) StdoutLine: {'line': b'-- Gazebo version: 11.10\n'}
+[5.461867] (rover_gazebosim) StdoutLine: {'line': b"-- Checking for module 'tbb'\n"}
+[5.501451] (rover_gazebosim) StdoutLine: {'line': b'--   Found tbb, version 2021.5.0\n'}
+[5.515363] (-) TimerEvent: {}
+[5.615784] (-) TimerEvent: {}
+[5.716221] (-) TimerEvent: {}
+[5.762070] (rover_gazebosim) StdoutLine: {'line': b'-- Configuring done\n'}
+[5.777666] (rover_gazebosim) StdoutLine: {'line': b'-- Generating done\n'}
+[5.785418] (rover_gazebosim) StdoutLine: {'line': b'-- Build files have been written to: /home/dhher/mrt_ws/src/rover_gazebosim/build/rover_gazebosim\n'}
+[5.811856] (rover_gazebosim) CommandEnded: {'returncode': 0}
+[5.813587] (rover_gazebosim) JobProgress: {'identifier': 'rover_gazebosim', 'progress': 'build'}
+[5.816469] (rover_gazebosim) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/dhher/mrt_ws/src/rover_gazebosim/build/rover_gazebosim', '--', '-j16', '-l16'], 'cwd': '/home/dhher/mrt_ws/src/rover_gazebosim/build/rover_gazebosim', 'env': OrderedDict([('USER', 'dhher'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('OLDPWD', '/home/dhher/mrt_ws/src/rover_gazebosim/launch'), ('HOME', '/home/dhher'), ('LESS', '-R'), ('DESKTOP_SESSION', 'ubuntu'), ('ZSH', '/home/dhher/.oh-my-zsh'), ('LSCOLORS', 'Gxfxcxdxbxegedabagacad'), ('GTK_MODULES', 'gail:atk-bridge'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('PAGER', 'less'), ('ROS_PYTHON_VERSION', '3'), ('SYSTEMD_EXEC_PID', '1831'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'dhher'), ('_', '/usr/bin/colcon'), ('XDG_SESSION_CLASS', 'user'), ('ROS_VERSION', '2'), ('USERNAME', 'dhher'), ('TERM', 'xterm-kitty'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '7'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/dhher/.fzf/bin'), ('SESSION_MANAGER', 'local/dhher-HP-Pavilion-Laptop-15-eh1xxx:@/tmp/.ICE-unix/1551,unix/dhher-HP-Pavilion-Laptop-15-eh1xxx:/tmp/.ICE-unix/1551'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/2e4a8492_5996_4f96_942a_fd53000f5663'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LANG', 'en_US.UTF-8'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('GNOME_TERMINAL_SERVICE', ':1.126'), ('XMODIFIERS', '@im=ibus'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.6PLH12'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/usr/bin/zsh'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('KITTY_WINDOW_ID', '1'), ('QT_IM_MODULE', 'ibus'), ('LC_ALL', 'en_US.UTF-8'), ('PWD', '/home/dhher/mrt_ws/src/rover_gazebosim/build/rover_gazebosim'), ('XDG_DATA_DIRS', '/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[5.817544] (-) TimerEvent: {}
+[5.917905] (-) TimerEvent: {}
+[5.924952] (rover_gazebosim) CommandEnded: {'returncode': 0}
+[5.926281] (rover_gazebosim) JobProgress: {'identifier': 'rover_gazebosim', 'progress': 'install'}
+[5.949708] (rover_gazebosim) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/dhher/mrt_ws/src/rover_gazebosim/build/rover_gazebosim'], 'cwd': '/home/dhher/mrt_ws/src/rover_gazebosim/build/rover_gazebosim', 'env': OrderedDict([('USER', 'dhher'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('OLDPWD', '/home/dhher/mrt_ws/src/rover_gazebosim/launch'), ('HOME', '/home/dhher'), ('LESS', '-R'), ('DESKTOP_SESSION', 'ubuntu'), ('ZSH', '/home/dhher/.oh-my-zsh'), ('LSCOLORS', 'Gxfxcxdxbxegedabagacad'), ('GTK_MODULES', 'gail:atk-bridge'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('PAGER', 'less'), ('ROS_PYTHON_VERSION', '3'), ('SYSTEMD_EXEC_PID', '1831'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'dhher'), ('_', '/usr/bin/colcon'), ('XDG_SESSION_CLASS', 'user'), ('ROS_VERSION', '2'), ('USERNAME', 'dhher'), ('TERM', 'xterm-kitty'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '7'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/dhher/.fzf/bin'), ('SESSION_MANAGER', 'local/dhher-HP-Pavilion-Laptop-15-eh1xxx:@/tmp/.ICE-unix/1551,unix/dhher-HP-Pavilion-Laptop-15-eh1xxx:/tmp/.ICE-unix/1551'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/2e4a8492_5996_4f96_942a_fd53000f5663'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LANG', 'en_US.UTF-8'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('GNOME_TERMINAL_SERVICE', ':1.126'), ('XMODIFIERS', '@im=ibus'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.6PLH12'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/usr/bin/zsh'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('KITTY_WINDOW_ID', '1'), ('QT_IM_MODULE', 'ibus'), ('LC_ALL', 'en_US.UTF-8'), ('PWD', '/home/dhher/mrt_ws/src/rover_gazebosim/build/rover_gazebosim'), ('XDG_DATA_DIRS', '/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[5.967435] (rover_gazebosim) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[5.968665] (rover_gazebosim) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[5.969927] (rover_gazebosim) StdoutLine: {'line': b'-- Symlinking: /home/dhher/mrt_ws/src/rover_gazebosim/install/rover_gazebosim/share/rover_gazebosim//launch/slam_launch.launch.py\n'}
+[5.992926] (rover_gazebosim) StdoutLine: {'line': b'-- Symlinking: /home/dhher/mrt_ws/src/rover_gazebosim/install/rover_gazebosim/share/rover_gazebosim//launch/spawn_rover.launch.py\n'}
+[6.016266] (rover_gazebosim) StdoutLine: {'line': b'-- Symlinking: /home/dhher/mrt_ws/src/rover_gazebosim/install/rover_gazebosim/share/rover_gazebosim//config/ekf.yaml\n'}
+[6.018017] (-) TimerEvent: {}
+[6.041483] (rover_gazebosim) StdoutLine: {'line': b'-- Symlinking: /home/dhher/mrt_ws/src/rover_gazebosim/install/rover_gazebosim/share/rover_gazebosim//config/gazebo_params.yaml\n'}
+[6.067591] (rover_gazebosim) StdoutLine: {'line': b'-- Symlinking: /home/dhher/mrt_ws/src/rover_gazebosim/install/rover_gazebosim/share/rover_gazebosim//config/online_slam_params.yaml\n'}
+[6.092934] (rover_gazebosim) StdoutLine: {'line': b'-- Symlinking: /home/dhher/mrt_ws/src/rover_gazebosim/install/rover_gazebosim/share/rover_gazebosim//config/parameter_bridge.yaml\n'}
+[6.116136] (rover_gazebosim) StdoutLine: {'line': b'-- Symlinking: /home/dhher/mrt_ws/src/rover_gazebosim/install/rover_gazebosim/share/rover_gazebosim//config/slam_params.yaml\n'}
+[6.118178] (-) TimerEvent: {}
+[6.139785] (rover_gazebosim) StdoutLine: {'line': b'-- Symlinking: /home/dhher/mrt_ws/src/rover_gazebosim/install/rover_gazebosim/share/rover_gazebosim//urdf/materials.xacro\n'}
+[6.162332] (rover_gazebosim) StdoutLine: {'line': b'-- Symlinking: /home/dhher/mrt_ws/src/rover_gazebosim/install/rover_gazebosim/share/rover_gazebosim//urdf/rover.urdf\n'}
+[6.185258] (rover_gazebosim) StdoutLine: {'line': b'-- Symlinking: /home/dhher/mrt_ws/src/rover_gazebosim/install/rover_gazebosim/share/rover_gazebosim//urdf/rover/rover.gazebo\n'}
+[6.208915] (rover_gazebosim) StdoutLine: {'line': b'-- Symlinking: /home/dhher/mrt_ws/src/rover_gazebosim/install/rover_gazebosim/share/rover_gazebosim//meshes/Left_bogie.STL\n'}
+[6.218306] (-) TimerEvent: {}
+[6.231381] (rover_gazebosim) StdoutLine: {'line': b'-- Symlinking: /home/dhher/mrt_ws/src/rover_gazebosim/install/rover_gazebosim/share/rover_gazebosim//meshes/Left_rocker.STL\n'}
+[6.254818] (rover_gazebosim) StdoutLine: {'line': b'-- Symlinking: /home/dhher/mrt_ws/src/rover_gazebosim/install/rover_gazebosim/share/rover_gazebosim//meshes/Right_bogie.STL\n'}
+[6.277321] (rover_gazebosim) StdoutLine: {'line': b'-- Symlinking: /home/dhher/mrt_ws/src/rover_gazebosim/install/rover_gazebosim/share/rover_gazebosim//meshes/Right_rocker.STL\n'}
+[6.299890] (rover_gazebosim) StdoutLine: {'line': b'-- Symlinking: /home/dhher/mrt_ws/src/rover_gazebosim/install/rover_gazebosim/share/rover_gazebosim//meshes/ball-left-down.STL\n'}
+[6.318434] (-) TimerEvent: {}
+[6.321908] (rover_gazebosim) StdoutLine: {'line': b'-- Symlinking: /home/dhher/mrt_ws/src/rover_gazebosim/install/rover_gazebosim/share/rover_gazebosim//meshes/ball-left-down0.STL\n'}
+[6.344540] (rover_gazebosim) StdoutLine: {'line': b'-- Symlinking: /home/dhher/mrt_ws/src/rover_gazebosim/install/rover_gazebosim/share/rover_gazebosim//meshes/ball-right-down.STL\n'}
+[6.367188] (rover_gazebosim) StdoutLine: {'line': b'-- Symlinking: /home/dhher/mrt_ws/src/rover_gazebosim/install/rover_gazebosim/share/rover_gazebosim//meshes/ball-right-down0.STL\n'}
+[6.390139] (rover_gazebosim) StdoutLine: {'line': b'-- Symlinking: /home/dhher/mrt_ws/src/rover_gazebosim/install/rover_gazebosim/share/rover_gazebosim//meshes/base_link.STL\n'}
+[6.412763] (rover_gazebosim) StdoutLine: {'line': b'-- Symlinking: /home/dhher/mrt_ws/src/rover_gazebosim/install/rover_gazebosim/share/rover_gazebosim//meshes/connector-link-1.STL\n'}
+[6.418562] (-) TimerEvent: {}
+[6.435501] (rover_gazebosim) StdoutLine: {'line': b'-- Symlinking: /home/dhher/mrt_ws/src/rover_gazebosim/install/rover_gazebosim/share/rover_gazebosim//meshes/connector-link-2.STL\n'}
+[6.457930] (rover_gazebosim) StdoutLine: {'line': b'-- Symlinking: /home/dhher/mrt_ws/src/rover_gazebosim/install/rover_gazebosim/share/rover_gazebosim//meshes/left-rod.STL\n'}
+[6.480329] (rover_gazebosim) StdoutLine: {'line': b'-- Symlinking: /home/dhher/mrt_ws/src/rover_gazebosim/install/rover_gazebosim/share/rover_gazebosim//meshes/right-rod.STL\n'}
+[6.502795] (rover_gazebosim) StdoutLine: {'line': b'-- Symlinking: /home/dhher/mrt_ws/src/rover_gazebosim/install/rover_gazebosim/share/rover_gazebosim//meshes/socket-left-down.STL\n'}
+[6.518691] (-) TimerEvent: {}
+[6.525734] (rover_gazebosim) StdoutLine: {'line': b'-- Symlinking: /home/dhher/mrt_ws/src/rover_gazebosim/install/rover_gazebosim/share/rover_gazebosim//meshes/socket-left.STL\n'}
+[6.548433] (rover_gazebosim) StdoutLine: {'line': b'-- Symlinking: /home/dhher/mrt_ws/src/rover_gazebosim/install/rover_gazebosim/share/rover_gazebosim//meshes/socket-right-down.STL\n'}
+[6.571160] (rover_gazebosim) StdoutLine: {'line': b'-- Symlinking: /home/dhher/mrt_ws/src/rover_gazebosim/install/rover_gazebosim/share/rover_gazebosim//meshes/socket-right.STL\n'}
+[6.593178] (rover_gazebosim) StdoutLine: {'line': b'-- Symlinking: /home/dhher/mrt_ws/src/rover_gazebosim/install/rover_gazebosim/share/rover_gazebosim//meshes/triangle-ball-left.STL\n'}
+[6.615751] (rover_gazebosim) StdoutLine: {'line': b'-- Symlinking: /home/dhher/mrt_ws/src/rover_gazebosim/install/rover_gazebosim/share/rover_gazebosim//meshes/triangle-ball-right.STL\n'}
+[6.618819] (-) TimerEvent: {}
+[6.638392] (rover_gazebosim) StdoutLine: {'line': b'-- Symlinking: /home/dhher/mrt_ws/src/rover_gazebosim/install/rover_gazebosim/share/rover_gazebosim//meshes/triangle-connector-l.STL\n'}
+[6.661169] (rover_gazebosim) StdoutLine: {'line': b'-- Symlinking: /home/dhher/mrt_ws/src/rover_gazebosim/install/rover_gazebosim/share/rover_gazebosim//meshes/triangle-connector-r.STL\n'}
+[6.683892] (rover_gazebosim) StdoutLine: {'line': b'-- Symlinking: /home/dhher/mrt_ws/src/rover_gazebosim/install/rover_gazebosim/share/rover_gazebosim//meshes/triangle-left.STL\n'}
+[6.706452] (rover_gazebosim) StdoutLine: {'line': b'-- Symlinking: /home/dhher/mrt_ws/src/rover_gazebosim/install/rover_gazebosim/share/rover_gazebosim//meshes/triangle-right.STL\n'}
+[6.718958] (-) TimerEvent: {}
+[6.728917] (rover_gazebosim) StdoutLine: {'line': b'-- Symlinking: /home/dhher/mrt_ws/src/rover_gazebosim/install/rover_gazebosim/share/rover_gazebosim//meshes/wheel_1.STL\n'}
+[6.751979] (rover_gazebosim) StdoutLine: {'line': b'-- Symlinking: /home/dhher/mrt_ws/src/rover_gazebosim/install/rover_gazebosim/share/rover_gazebosim//meshes/wheel_2.STL\n'}
+[6.773771] (rover_gazebosim) StdoutLine: {'line': b'-- Symlinking: /home/dhher/mrt_ws/src/rover_gazebosim/install/rover_gazebosim/share/rover_gazebosim//meshes/wheel_3.STL\n'}
+[6.796431] (rover_gazebosim) StdoutLine: {'line': b'-- Symlinking: /home/dhher/mrt_ws/src/rover_gazebosim/install/rover_gazebosim/share/rover_gazebosim//meshes/wheel_4.STL\n'}
+[6.819096] (rover_gazebosim) StdoutLine: {'line': b'-- Symlinking: /home/dhher/mrt_ws/src/rover_gazebosim/install/rover_gazebosim/share/rover_gazebosim//meshes/wheel_5.STL\n'}
+[6.819374] (-) TimerEvent: {}
+[6.842015] (rover_gazebosim) StdoutLine: {'line': b'-- Symlinking: /home/dhher/mrt_ws/src/rover_gazebosim/install/rover_gazebosim/share/rover_gazebosim//meshes/wheel_6.STL\n'}
+[6.864984] (rover_gazebosim) StdoutLine: {'line': b'-- Symlinking: /home/dhher/mrt_ws/src/rover_gazebosim/install/rover_gazebosim/share/ament_index/resource_index/package_run_dependencies/rover_gazebosim\n'}
+[6.888171] (rover_gazebosim) StdoutLine: {'line': b'-- Symlinking: /home/dhher/mrt_ws/src/rover_gazebosim/install/rover_gazebosim/share/ament_index/resource_index/parent_prefix_path/rover_gazebosim\n'}
+[6.910544] (rover_gazebosim) StdoutLine: {'line': b'-- Symlinking: /home/dhher/mrt_ws/src/rover_gazebosim/install/rover_gazebosim/share/rover_gazebosim/environment/ament_prefix_path.sh\n'}
+[6.919505] (-) TimerEvent: {}
+[6.933793] (rover_gazebosim) StdoutLine: {'line': b'-- Symlinking: /home/dhher/mrt_ws/src/rover_gazebosim/install/rover_gazebosim/share/rover_gazebosim/environment/ament_prefix_path.dsv\n'}
+[6.956770] (rover_gazebosim) StdoutLine: {'line': b'-- Symlinking: /home/dhher/mrt_ws/src/rover_gazebosim/install/rover_gazebosim/share/rover_gazebosim/environment/path.sh\n'}
+[6.979677] (rover_gazebosim) StdoutLine: {'line': b'-- Symlinking: /home/dhher/mrt_ws/src/rover_gazebosim/install/rover_gazebosim/share/rover_gazebosim/environment/path.dsv\n'}
+[7.002253] (rover_gazebosim) StdoutLine: {'line': b'-- Symlinking: /home/dhher/mrt_ws/src/rover_gazebosim/install/rover_gazebosim/share/rover_gazebosim/local_setup.bash\n'}
+[7.019689] (-) TimerEvent: {}
+[7.024657] (rover_gazebosim) StdoutLine: {'line': b'-- Symlinking: /home/dhher/mrt_ws/src/rover_gazebosim/install/rover_gazebosim/share/rover_gazebosim/local_setup.sh\n'}
+[7.047772] (rover_gazebosim) StdoutLine: {'line': b'-- Symlinking: /home/dhher/mrt_ws/src/rover_gazebosim/install/rover_gazebosim/share/rover_gazebosim/local_setup.zsh\n'}
+[7.070875] (rover_gazebosim) StdoutLine: {'line': b'-- Symlinking: /home/dhher/mrt_ws/src/rover_gazebosim/install/rover_gazebosim/share/rover_gazebosim/local_setup.dsv\n'}
+[7.093916] (rover_gazebosim) StdoutLine: {'line': b'-- Symlinking: /home/dhher/mrt_ws/src/rover_gazebosim/install/rover_gazebosim/share/rover_gazebosim/package.dsv\n'}
+[7.117015] (rover_gazebosim) StdoutLine: {'line': b'-- Symlinking: /home/dhher/mrt_ws/src/rover_gazebosim/install/rover_gazebosim/share/ament_index/resource_index/packages/rover_gazebosim\n'}
+[7.119803] (-) TimerEvent: {}
+[7.140543] (rover_gazebosim) StdoutLine: {'line': b'-- Symlinking: /home/dhher/mrt_ws/src/rover_gazebosim/install/rover_gazebosim/share/rover_gazebosim/cmake/rover_gazebosimConfig.cmake\n'}
+[7.163305] (rover_gazebosim) StdoutLine: {'line': b'-- Symlinking: /home/dhher/mrt_ws/src/rover_gazebosim/install/rover_gazebosim/share/rover_gazebosim/cmake/rover_gazebosimConfig-version.cmake\n'}
+[7.185800] (rover_gazebosim) StdoutLine: {'line': b'-- Symlinking: /home/dhher/mrt_ws/src/rover_gazebosim/install/rover_gazebosim/share/rover_gazebosim/package.xml\n'}
+[7.213881] (rover_gazebosim) CommandEnded: {'returncode': 0}
+[7.219932] (-) TimerEvent: {}
+[7.252095] (rover_gazebosim) JobEnded: {'identifier': 'rover_gazebosim', 'rc': 0}
+[7.253362] (-) EventReactorShutdown: {}
